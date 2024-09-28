@@ -57,20 +57,10 @@ public class LoginController {
 		orders.add(new OrderModel(9, "0000000008", "This is Product 9", 9, 9));
 		orders.add(new OrderModel(10, "0000000009", "This is Product 10", 10, 10));
 		orders.add(new OrderModel(100, "0000000100", "This is Product 100", 100, 100));
-		 /*(1, '0000000000', 'This is Product 1', 1, 1),
-(2, '0000000001', 'This is Product 2', 2, 2),
-(3, '0000000002', 'This is Product 3', 3, 3),
-(4, '0000000003', 'This is Product 4', 4, 4),
-(5, '0000000004', 'This is Product 5', 5, 5),
-(6, '0000000005', 'This is Product 6', 6, 6),
-(7, '0000000006', 'This is Product 7', 7, 7),
-(8, '0000000007', 'This is Product 8', 8, 8),
-(9, '0000000008', 'This is Product 9', 9, 9),
-(10, '0000000009', 'This is Product 10', 10, 10),
-(11, '0000000100', 'This is Product 100', 10, 10);*/
+		
 		model.addAttribute("title", "My Orders");
-		//model.addAttribute("orders", service.getOrders());
-		model.addAttribute("orders", orders);
+		model.addAttribute("orders", service.getOrders());
+		//model.addAttribute("orders", orders);
 		return "orders";
 		
 		
