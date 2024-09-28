@@ -45,15 +45,32 @@ public class LoginController {
 		}
 		
 		//Create some orders
-		/*List<OrderModel> orders = new ArrayList<OrderModel>();
-		orders.add(new OrderModel(0L, "000000001", "Product 1", 1.00f, 1));
-		orders.add(new OrderModel(1L, "000000002", "Product 2", 2.00f, 2));
-		orders.add(new OrderModel(2L, "000000003", "Product 3", 3.00f, 3));
-		orders.add(new OrderModel(3L, "000000004", "Product 4", 4.00f, 4));
-		orders.add(new OrderModel(4L, "000000005", "Product 5", 5.00f, 5));
-		 */
+		List<OrderModel> orders = new ArrayList<OrderModel>();
+		orders.add(new OrderModel(1, "0000000000", "This is Product 1", 1, 1));
+		orders.add(new OrderModel(2, "0000000001", "This is Product 2", 2, 2));
+		orders.add(new OrderModel(3, "0000000002", "This is Product 3", 3, 3));
+		orders.add(new OrderModel(4, "0000000003", "This is Product 4", 4, 4));
+		orders.add(new OrderModel(5, "0000000004", "This is Product 5", 5, 5));
+		orders.add(new OrderModel(6, "0000000005", "This is Product 6", 6, 6));
+		orders.add(new OrderModel(7, "0000000006", "This is Product 7", 7, 7));
+		orders.add(new OrderModel(8, "0000000007", "This is Product 8", 8, 8));
+		orders.add(new OrderModel(9, "0000000008", "This is Product 9", 9, 9));
+		orders.add(new OrderModel(10, "0000000009", "This is Product 10", 10, 10));
+		orders.add(new OrderModel(100, "0000000100", "This is Product 100", 100, 100));
+		 /*(1, '0000000000', 'This is Product 1', 1, 1),
+(2, '0000000001', 'This is Product 2', 2, 2),
+(3, '0000000002', 'This is Product 3', 3, 3),
+(4, '0000000003', 'This is Product 4', 4, 4),
+(5, '0000000004', 'This is Product 5', 5, 5),
+(6, '0000000005', 'This is Product 6', 6, 6),
+(7, '0000000006', 'This is Product 7', 7, 7),
+(8, '0000000007', 'This is Product 8', 8, 8),
+(9, '0000000008', 'This is Product 9', 9, 9),
+(10, '0000000009', 'This is Product 10', 10, 10),
+(11, '0000000100', 'This is Product 100', 10, 10);*/
 		model.addAttribute("title", "My Orders");
-		model.addAttribute("orders", service.getOrders());
+		//model.addAttribute("orders", service.getOrders());
+		model.addAttribute("orders", orders);
 		return "orders";
 		
 		
