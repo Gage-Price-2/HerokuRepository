@@ -18,7 +18,7 @@ import com.gcu.model.OrderModel;
 import jakarta.validation.Valid;
 
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/")
 public class LoginController {
 	@Autowired
 	private OrdersBusinessServiceInterface service;
