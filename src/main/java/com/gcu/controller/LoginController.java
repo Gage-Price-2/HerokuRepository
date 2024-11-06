@@ -36,7 +36,7 @@ public class LoginController {
 	@PostMapping("/doLogin")
 	public String doLogin(@Valid LoginModel loginModel, BindingResult bindingResult, Model model) {
 		
-		service.test();
+		//service.test();
 		security.authenticate("gage", "price");
 		//Check for validation errors
 		if(bindingResult.hasErrors()) {
