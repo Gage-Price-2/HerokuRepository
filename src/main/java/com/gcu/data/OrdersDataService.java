@@ -3,9 +3,12 @@ package com.gcu.data;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.gcu.business.OrdersBusinessService;
 import com.gcu.data.entity.OrderEntity;
 import com.gcu.data.respository.OrdersRespository;
 
@@ -13,6 +16,7 @@ import com.gcu.data.respository.OrdersRespository;
 public class OrdersDataService implements DataAccessInterface<OrderEntity>
 {
 
+	private static final Logger logger = LoggerFactory.getLogger(OrdersDataService.class);
 	@Autowired
 	private OrdersRespository ordersRespository;
 	
@@ -34,8 +38,10 @@ public class OrdersDataService implements DataAccessInterface<OrderEntity>
 		}
 		catch(Exception e)
 		{
+			logger.atTrace();
 			e.printStackTrace();
 		}
+		logger.atInfo();
 		return orders;
 	}
 
